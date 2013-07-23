@@ -7,7 +7,7 @@ app.use(express.logger());
 var fs = require('fs');
 
 var buffer = new Buffer(32);
-buffer = fs.readFile("index.html");
+buffer = fs.readFileSync("index.html");
 
 //var message = buffer.toString();
 
