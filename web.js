@@ -9,11 +9,12 @@ var fs = require('fs');
 var buffer = new Buffer(32);
 buffer = fs.readFile("index.html");
 
-var message = buffer.toString();
+//var message = buffer.toString();
 
 app.get('/', function(request, response) {
 //  response.send('Hello World again and again!');  
-  response.send(message);
+//  response.send(message);
+  response.send(buffer.toString());
 });
 
 var port = process.env.PORT || 5000;
